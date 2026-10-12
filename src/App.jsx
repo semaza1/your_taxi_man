@@ -75,7 +75,7 @@ export default function App() {
 
   // Homepage: Dedicated editorial presentation without embedded booking form
   return (
-    <div className="min-h-screen bg-[#FBFBFA] text-stone-700 flex flex-col font-sans selection:bg-taxi-yellow selection:text-black antialiased overflow-x-hidden">
+    <div className="min-h-screen bg-[#0D0D0E] text-stone-300 flex flex-col font-sans selection:bg-taxi-yellow selection:text-black antialiased overflow-x-hidden">
       {/* Top Editorial Navigation */}
       <Navbar currentPath={currentPath} onNavigate={navigate} />
 
