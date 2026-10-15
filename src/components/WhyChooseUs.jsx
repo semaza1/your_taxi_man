@@ -35,42 +35,42 @@ export default function WhyChooseUs({ onBookClick }) {
   ]
 
   return (
-    <section id="why-us" className="py-20 sm:py-28 bg-[#111113] border-t border-white/5">
+    <section id="why-us" className="py-16 sm:py-24 bg-[#FBFBFA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="max-w-2xl mb-12 sm:mb-16 text-left">
-          <div className="flex items-center gap-3 mb-3">
-            <span className="w-8 h-[2.5px] bg-taxi-yellow rounded-full shrink-0" />
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-stone-400">
+          <div className="inline-flex items-center gap-2 mb-3">
+            <span className="w-2 h-2 rounded-full bg-taxi-yellow shrink-0" />
+            <span className="text-xs font-semibold uppercase tracking-widest text-stone-500">
               Straightforward Coordination
             </span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-stone-900 tracking-tight leading-tight">
             How Booking with Your Taxi Man Works
           </h2>
 
-          <p className="mt-3 text-sm sm:text-base text-stone-400 leading-relaxed">
+          <p className="mt-3 text-sm sm:text-base text-stone-600 leading-relaxed">
             Skip rigid call centers and automated booking engines. We prioritize personal communication and dependable execution from first contact to final drop-off.
           </p>
         </div>
 
-        {/* 3 Editorial Steps */}
+        {/* 3 Editorial Steps (No Cheesy Icon Containers) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-14 text-left">
           {steps.map((step) => (
             <div
               key={step.num}
-              className="bg-[#18181B] p-6 sm:p-7 rounded-2xl border border-white/10 shadow-lg flex flex-col justify-between"
+              className="bg-white p-6 sm:p-7 rounded-2xl border border-stone-200/90 shadow-xs flex flex-col justify-between"
             >
               <div>
-                <span className="text-2xl font-mono font-bold text-taxi-yellow border-b-2 border-taxi-yellow pb-1 inline-block mb-4">
+                <span className="text-2xl font-mono font-bold text-stone-900 border-b-2 border-taxi-yellow pb-1 inline-block mb-4">
                   {step.num}
                 </span>
-                <h3 className="text-base sm:text-lg font-bold text-white mb-2">
+                <h3 className="text-base sm:text-lg font-bold text-stone-900 mb-2">
                   {step.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-stone-400 leading-relaxed">
+                <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
                   {step.text}
                 </p>
               </div>
@@ -79,31 +79,31 @@ export default function WhyChooseUs({ onBookClick }) {
         </div>
 
         {/* Core Standards Strip */}
-        <div className="bg-[#18181B] rounded-2xl border border-white/10 p-6 sm:p-10 shadow-lg text-left">
+        <div className="bg-white rounded-2xl border border-stone-200 p-6 sm:p-10 shadow-xs text-left">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {standards.map((item) => (
               <div key={item.title}>
-                <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-1.5">
+                <h4 className="text-sm font-bold text-stone-900 uppercase tracking-wide mb-1.5">
                   {item.title}
                 </h4>
-                <p className="text-xs sm:text-sm text-stone-400 leading-relaxed">
+                <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
                   {item.description}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <p className="text-xs text-stone-400">
+          <div className="mt-8 pt-6 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <p className="text-xs text-stone-500">
               Ready to schedule an airport transfer or countrywide trip?
             </p>
             <button
               type="button"
               onClick={onBookClick}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-bold text-xs sm:text-sm text-black bg-taxi-yellow hover:bg-taxi-yellowHover transition-colors min-h-[44px] shadow-md active:scale-95"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-bold text-xs sm:text-sm text-stone-900 bg-taxi-yellow hover:bg-taxi-yellowHover transition-colors min-h-[44px]"
             >
-              <span>Go to Booking Page (/book)</span>
-              <ArrowRight className="w-4 h-4 text-black stroke-[2.5]" />
+              <span>Go to Booking Page</span>
+              <ArrowRight className="w-4 h-4" />
             </button>
           </div>
         </div>

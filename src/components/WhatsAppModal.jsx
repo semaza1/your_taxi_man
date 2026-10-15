@@ -29,7 +29,7 @@ export default function WhatsAppModal({ isOpen, onClose, bookingDetails }) {
     `Destination: ${bookingDetails.destination || 'To be confirmed'}`,
     `Date: ${bookingDetails.date || 'Flexible'}`,
     `Time: ${bookingDetails.time || 'Flexible'}`,
-    `Passengers: ${bookingDetails.passengers || '1–2 Passengers'}`,
+    `Passengers: ${bookingDetails.passengers || '1 Passenger'}`,
     `Service: ${bookingDetails.serviceType || 'General Inquiry'}`,
     bookingDetails.customNote ? `Additional details: ${bookingDetails.customNote}` : null,
     '',

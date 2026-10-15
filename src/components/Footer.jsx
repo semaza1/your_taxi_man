@@ -32,14 +32,14 @@ export default function Footer({ onNavigate }) {
           
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-stone-900 border border-stone-700 flex items-center justify-center font-bold overflow-hidden shrink-0">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-10 rounded-xl bg-white border border-stone-700 p-0.5 flex items-center justify-center font-bold overflow-hidden shrink-0 shadow-sm">
                 <img
-                  src="/images/your_taxi_man.jpg"
+                  src="/images/your_taxi_man_logo.png"
                   alt="Your Taxi Man Logo"
-                  className="w-full h-full object-cover"
-                  width="36"
-                  height="36"
+                  className="w-full h-full object-contain"
+                  width="44"
+                  height="34"
                 />
               </div>
               <span className="font-extrabold text-lg text-white tracking-tight flex items-center gap-1.5">

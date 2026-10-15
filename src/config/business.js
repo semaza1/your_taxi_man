@@ -4,7 +4,8 @@
  */
 export const BUSINESS_CONFIG = {
   name: "Your Taxi Man",
-  tagline: "Private Transportation & Driving Experience",
+  tagline: "Ride safe, arrive Happy — Private Transportation in Rwanda",
+  logoUrl: "/images/your_taxi_man_logo.png",
   country: "Rwanda",
   city: "Kigali",
   

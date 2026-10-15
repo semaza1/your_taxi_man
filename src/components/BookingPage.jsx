@@ -150,13 +150,13 @@ export default function BookingPage({ onBackToHome, preselectedService = '' }) {
           </button>
 
           <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-lg overflow-hidden border border-stone-200 shrink-0">
+            <div className="w-10 h-8 rounded-lg overflow-hidden border border-stone-200 bg-white p-0.5 shrink-0 flex items-center justify-center">
               <img
-                src="/images/your_taxi_man.jpg"
-                alt="Your Taxi Man"
-                className="w-full h-full object-cover"
-                width="28"
-                height="28"
+                src="/images/your_taxi_man_logo.png"
+                alt="Your Taxi Man Logo"
+                className="w-full h-full object-contain"
+                width="36"
+                height="26"
               />
             </div>
             <span className="font-extrabold text-sm sm:text-base text-stone-900 tracking-tight">
