@@ -10,9 +10,9 @@ export const BUSINESS_CONFIG = {
   city: "Kigali",
   
   // Contact details
-  whatsappNumber: "250798721418", 
-  whatsappDisplay: "+250 798 721 418",
-  phoneNumber: "+250 798 721 418",
+  whatsappNumber: "250788910995", 
+  whatsappDisplay: "+250 788 910 995",
+  phoneNumber: "+250 788 910 995",
   email: "semazaemmanuel@gmail.com",
   
   // Confirmed Social Profiles
