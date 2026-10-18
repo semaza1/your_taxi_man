@@ -25,26 +25,28 @@ export default function Hero({ onBookClick, onExploreClick }) {
   ]
 
   return (
-    <section id="home" className="relative bg-stone-950 text-white overflow-hidden min-h-[620px] sm:min-h-[680px] lg:h-screen lg:max-h-[960px] flex flex-col justify-between">
+    <section id="home" className="relative bg-stone-950 text-white overflow-hidden min-h-[680px] sm:min-h-[680px] lg:h-screen lg:max-h-[960px] flex flex-col justify-between">
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/images/hero-vehicle.jpg"
-          alt="Modern private vehicle on a scenic road overlooking Rwanda's green hills and Kigali skyline"
-          className="w-full h-full object-cover object-[72%_center] sm:object-[68%_center] md:object-[center_right] lg:object-right"
-          loading="eager"
-          fetchpriority="high"
-          width="1200"
-          height="670"
-        />
+        <picture>
+          <source media="(max-width: 639px)" srcSet="/images/hero-vehicle-mobile-crop1.jpg" />
+          <img
+            src="/images/hero-vehicle.jpg"
+            alt="Modern private vehicle on a scenic road overlooking Rwanda's green hills and Kigali skyline"
+            className="w-full h-full object-cover object-[50%_bottom] sm:object-[68%_center] md:object-[center_right] lg:object-right"
+            loading="eager"
+            fetchpriority="high"
+            width="1200"
+            height="670"
+          />
+        </picture>
 
         {/* Targeted Lighting Gradients:
-            - Left gradient creates deep, crisp contrast for the headline and text
-            - The right 50% stays bright and sunny so the white SUV pops dramatically
-            - Subtle top and bottom fades anchor the navbar and docked hallmark bar */}
-        <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/90 via-40% to-stone-950/40 sm:from-stone-950 sm:via-stone-950/75 sm:via-45% sm:to-transparent lg:from-stone-950 lg:via-stone-950/65 lg:via-45% lg:to-transparent pointer-events-none" />
-        <div className="absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-stone-950/80 via-stone-950/30 to-transparent pointer-events-none" />
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-stone-950/90 to-transparent pointer-events-none" />
+            - On mobile: top-to-bottom fade protects the headline and text while leaving the vehicle below bright and unobstructed
+            - On desktop: left-to-right fade creates contrast on the left while the vehicle pops on the right */}
+        <div className="absolute inset-0 bg-gradient-to-b from-stone-950 via-stone-950/85 via-42% to-transparent sm:bg-gradient-to-r sm:from-stone-950 sm:via-stone-950/75 sm:via-45% sm:to-transparent lg:from-stone-950 lg:via-stone-950/65 lg:via-45% lg:to-transparent pointer-events-none" />
+        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-stone-950/90 via-stone-950/40 to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-stone-950/90 to-transparent pointer-events-none" />
       </div>
 
       {/* Main Hero Content: Vertically centered on desktop */}
@@ -80,9 +82,9 @@ export default function Hero({ onBookClick, onExploreClick }) {
             <button
               type="button"
               onClick={onBookClick}
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 sm:px-8 sm:py-4 rounded-full font-bold text-sm sm:text-base text-stone-950 bg-taxi-yellow hover:bg-taxi-yellowHover shadow-lg hover:shadow-xl transition-all duration-200 active:scale-95 min-h-[48px] focus:outline-none focus:ring-2 focus:ring-taxi-yellow focus:ring-offset-2 focus:ring-offset-stone-950"
+              className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-4 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-xs sm:text-base text-stone-950 bg-taxi-yellow hover:bg-taxi-yellowHover shadow-lg hover:shadow-xl transition-all duration-200 active:scale-95 min-h-[48px] focus:outline-none focus:ring-2 focus:ring-taxi-yellow focus:ring-offset-2 focus:ring-offset-stone-950"
             >
-              <ArrowRight className="w-4 h-4 shrink-0" />
+              <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
               <span>Book a Ride</span>
             </button>
 
