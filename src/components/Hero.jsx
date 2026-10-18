@@ -4,28 +4,28 @@ export default function Hero({ onBookClick, onExploreClick }) {
   const hallmarks = [
     {
       icon: ShieldCheck,
-      title: 'Safe & Reliable',
+      title: 'Ride Safe',
       subtitle: 'Your safety comes first',
     },
     {
       icon: MapPin,
-      title: 'Anywhere in Rwanda',
-      subtitle: 'Pickup and drop-off',
+      title: 'KGL & Countrywide',
+      subtitle: 'Airport transfers & city pickups',
     },
     {
       icon: Car,
-      title: 'Comfortable Rides',
-      subtitle: 'Modern & well-maintained vehicles',
+      title: 'Arrive Happy',
+      subtitle: 'Modern, comfortable rides',
     },
     {
       icon: Mountain,
-      title: 'Explore More',
-      subtitle: 'Tours & travel experiences',
+      title: 'Explore Rwanda',
+      subtitle: 'Tours & custom travel',
     },
   ]
 
   return (
-    <section id="home" className="relative bg-stone-950 text-white overflow-hidden min-h-screen min-h-dvh lg:min-h-0 lg:h-screen lg:max-h-[960px] flex flex-col justify-between">
+    <section id="home" className="relative bg-stone-950 text-white overflow-hidden min-h-dvh lg:min-h-0 lg:h-screen lg:max-h-[960px] flex flex-col justify-between">
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0">
         <picture>
@@ -55,11 +55,11 @@ export default function Hero({ onBookClick, onExploreClick }) {
         {/* Left Hero Narrative */}
         <div className="max-w-2xl text-left space-y-4 sm:space-y-5">
           
-          {/* Eyebrow with yellow accent bar */}
+          {/* Eyebrow with yellow accent bar and brand slogan */}
           <div className="inline-flex items-center gap-2.5">
             <span className="w-8 sm:w-10 h-[2.5px] bg-taxi-yellow inline-block rounded-full shrink-0" />
             <span className="text-[10px] sm:text-xs font-bold tracking-[0.18em] uppercase text-stone-300">
-              Private Transportation in Rwanda
+              Your Taxi Man • Ride Safe, Arrive Happy
             </span>
           </div>
 
@@ -73,7 +73,7 @@ export default function Hero({ onBookClick, onExploreClick }) {
 
           {/* Subtitle Description */}
           <p className="text-sm sm:text-base lg:text-lg text-stone-200/90 max-w-lg leading-relaxed pt-0.5">
-            Reliable private transportation for your everyday journeys, airport transfers, and experiences exploring Rwanda.
+            Reliable private transportation across Rwanda—from seamless Kigali airport transfers and comfortable city rides to tailored countrywide journeys.
           </p>
 
           {/* Dual Call-to-Action Pill Buttons */}
