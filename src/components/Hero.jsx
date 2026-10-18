@@ -25,7 +25,7 @@ export default function Hero({ onBookClick, onExploreClick }) {
   ]
 
   return (
-    <section id="home" className="relative bg-stone-950 text-white overflow-hidden min-h-[680px] sm:min-h-[680px] lg:h-screen lg:max-h-[960px] flex flex-col justify-between">
+    <section id="home" className="relative bg-stone-950 text-white overflow-hidden min-h-screen min-h-dvh lg:min-h-0 lg:h-screen lg:max-h-[960px] flex flex-col justify-between">
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0">
         <picture>
@@ -33,7 +33,7 @@ export default function Hero({ onBookClick, onExploreClick }) {
           <img
             src="/images/hero-vehicle.jpg"
             alt="Modern private vehicle on a scenic road overlooking Rwanda's green hills and Kigali skyline"
-            className="w-full h-full object-cover object-[50%_bottom] sm:object-[68%_center] md:object-[center_right] lg:object-right"
+            className="w-full h-full object-cover object-[20%_bottom] sm:object-[80%_center] md:object-[center_right] lg:object-right"
             loading="eager"
             fetchpriority="high"
             width="1200"
