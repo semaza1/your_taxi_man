@@ -1,7 +1,15 @@
-import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import prerender from 'vite-plugin-prerender';
+import path from 'path';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  plugins: [
+    react(),
+    prerender({
+      staticDir: path.join(__dirname, 'dist'),
+      //routes: ['/'], // Add all major routes you want rendered (e.g., '/', '/about', '/services')
+      routes: ['/book']
+    }),
+  ],
+});
