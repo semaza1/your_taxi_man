@@ -8,8 +8,7 @@ export default defineConfig({
     react(),
     prerender({
       staticDir: path.join(__dirname, 'dist'),
-      //routes: ['/'], // Add all major routes you want rendered (e.g., '/', '/about', '/services')
-      routes: ['/book']
+      routes: ['/', '/book'], // Add all major routes you want rendered (e.g., '/', '/about', '/services')
     }),
   ],
 });
