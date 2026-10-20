@@ -11,7 +11,8 @@ import WhatsAppModal from './components/WhatsAppModal'
 import BookingPage from './components/BookingPage'
 
 export default function App() {
-  const [currentPath, setCurrentPath] = useState(window.location.pathname || '/')
+  const normalizePath = (p) => (p || '/').replace(/\/$/, '') || '/'
+  const [currentPath, setCurrentPath] = useState(() => normalizePath(window.location.pathname))
   const [modalOpen, setModalOpen] = useState(false)
   const [activeBookingData, setActiveBookingData] = useState(null)
   const [selectedServiceCategory, setSelectedServiceCategory] = useState('')
@@ -19,7 +20,7 @@ export default function App() {
   // Handle URL changes & popstate (browser back/forward button)
   useEffect(() => {
     const handleLocationChange = () => {
-      const pathname = window.location.pathname || '/'
+      const pathname = normalizePath(window.location.pathname)
       setCurrentPath(pathname)
       const searchParams = new URLSearchParams(window.location.search)
       const serviceParam = searchParams.get('service')
@@ -37,11 +38,12 @@ export default function App() {
     if (serviceCategory) {
       setSelectedServiceCategory(serviceCategory)
     }
+    const cleanPath = normalizePath(path)
     const fullUrl = serviceCategory
-      ? `${path}?service=${encodeURIComponent(serviceCategory)}`
-      : path
+      ? `${cleanPath}?service=${encodeURIComponent(serviceCategory)}`
+      : cleanPath
     window.history.pushState({}, '', fullUrl)
-    setCurrentPath(path)
+    setCurrentPath(cleanPath)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
