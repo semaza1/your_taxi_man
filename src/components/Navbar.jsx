@@ -45,6 +45,7 @@ export default function Navbar({ currentPath, onNavigate }) {
     { label: 'Home', href: '#home', id: 'home' },
     { label: 'Services', href: '#services', id: 'services' },
     { label: 'About', href: '#about', id: 'about' },
+    { label: 'Journal', href: '/journal', id: 'journal', isPage: true },
     { label: 'Contact', href: '#contact', id: 'contact' },
   ]
 
@@ -52,8 +53,13 @@ export default function Navbar({ currentPath, onNavigate }) {
     e.preventDefault()
     setIsMobileMenuOpen(false)
 
+    if (item.isPage) {
+      if (onNavigate) onNavigate(item.href)
+      return
+    }
+
     if (currentPath !== '/') {
-      onNavigate('/')
+      if (onNavigate) onNavigate('/')
       setTimeout(() => {
         const target = document.querySelector(item.href)
         if (target) {
@@ -115,7 +121,9 @@ export default function Navbar({ currentPath, onNavigate }) {
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center gap-7 lg:gap-9 text-sm font-medium">
             {navLinks.map((link) => {
-              const isActive = activeSection === link.id && currentPath === '/'
+              const isActive = link.isPage
+                ? currentPath === link.href || currentPath.startsWith(link.href + '/')
+                : activeSection === link.id && currentPath === '/'
               return (
                 <a
                   key={link.label}
@@ -187,20 +195,25 @@ export default function Navbar({ currentPath, onNavigate }) {
         <div className="sm:hidden fixed inset-x-0 top-[60px] bottom-0 bg-stone-950/70 backdrop-blur-sm z-50 flex flex-col justify-start">
           <div className="bg-stone-900 border-b border-stone-800 px-5 pt-4 pb-6 shadow-2xl max-h-[calc(100vh-60px)] overflow-y-auto text-left">
             <div className="flex flex-col space-y-1">
-              {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  onClick={(e) => handleLinkClick(e, link)}
-                  className={`flex items-center justify-between px-3.5 py-3 rounded-xl text-base font-semibold transition-colors min-h-[48px] ${
-                    activeSection === link.id && currentPath === '/'
-                      ? 'bg-stone-800 text-taxi-yellow font-bold'
-                      : 'text-stone-200 hover:bg-stone-800/60'
-                  }`}
-                >
-                  <span>{link.label}</span>
-                </a>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = link.isPage
+                  ? currentPath === link.href || currentPath.startsWith(link.href + '/')
+                  : activeSection === link.id && currentPath === '/'
+                return (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    onClick={(e) => handleLinkClick(e, link)}
+                    className={`flex items-center justify-between px-3.5 py-3 rounded-xl text-base font-semibold transition-colors min-h-[48px] ${
+                      isActive
+                        ? 'bg-stone-800 text-taxi-yellow font-bold'
+                        : 'text-stone-200 hover:bg-stone-800/60'
+                    }`}
+                  >
+                    <span>{link.label}</span>
+                  </a>
+                )
+              })}
             </div>
 
             <div className="mt-5 pt-4 border-t border-stone-800 space-y-2.5">

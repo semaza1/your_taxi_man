@@ -1,0 +1,127 @@
+{
+  "_id": "demo-post-scenic-kigali-musanze",
+  "_type": "post",
+  "title": "[Demonstration Post] Scenic Journey: Kigali to Volcanoes National Park",
+  "slug": {
+    "_type": "slug",
+    "current": "scenic-journey-kigali-to-volcanoes-national-park"
+  },
+  "category": "rwanda-travel",
+  "excerpt": "A scenic route overview from Kigali to Musanze, highlighting mountain passes, road quality, and travel timing for Volcanoes National Park visitors.",
+  "publishedAt": "2025-01-15T09:00:00.000Z",
+  "featured": true,
+  "instagramUrl": "https://www.instagram.com/your_taxi_man/",
+  "body": [
+    {
+      "_key": "b1",
+      "_type": "block",
+      "style": "blockquote",
+      "children": [
+        {
+          "_key": "b1c1",
+          "_type": "span",
+          "text": "[DEMONSTRATION CONTENT] This sample article is provided solely to test the Sanity Studio schema and layout rendering. It contains no personal claims and can be safely deleted or replaced anytime in Sanity Studio."
+        }
+      ]
+    },
+    {
+      "_key": "b2",
+      "_type": "block",
+      "style": "h2",
+      "children": [
+        {
+          "_key": "b2c1",
+          "_type": "span",
+          "text": "The Northern Corridor Route"
+        }
+      ]
+    },
+    {
+      "_key": "b3",
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_key": "b3c1",
+          "_type": "span",
+          "text": "The drive from Kigali to Musanze covers approximately 100 kilometers along a well-paved, winding highway through Rwanda's northern mountain terrain. Typical travel time is between 2 to 2.5 hours under standard driving conditions."
+        }
+      ]
+    },
+    {
+      "_key": "b4",
+      "_type": "block",
+      "style": "h2",
+      "children": [
+        {
+          "_key": "b4c1",
+          "_type": "span",
+          "text": "Key Highlights Along the Way"
+        }
+      ]
+    },
+    {
+      "_key": "b5",
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_key": "b5c1",
+          "_type": "span",
+          "text": "Expansive panoramic views of terraced green hills and tea plantations."
+        }
+      ]
+    },
+    {
+      "_key": "b6",
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_key": "b6c1",
+          "_type": "span",
+          "text": "High-altitude mountain vistas approaching the Virunga volcanic chain."
+        }
+      ]
+    },
+    {
+      "_key": "b7",
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_key": "b7c1",
+          "_type": "span",
+          "text": "Scenic roadside view-stops ideal for photography and travel breaks."
+        }
+      ]
+    },
+    {
+      "_key": "b8",
+      "_type": "block",
+      "style": "h2",
+      "children": [
+        {
+          "_key": "b8c1",
+          "_type": "span",
+          "text": "Travel Planning Advice"
+        }
+      ]
+    },
+    {
+      "_key": "b9",
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_key": "b9c1",
+          "_type": "span",
+          "text": "For gorilla trekking expeditions, departure from Kigali is typically scheduled for early morning to reach the Kinigi park headquarters for the 7:00 AM briefing, or an afternoon chauffeur transfer the day before to rest comfortably in Musanze."
+        }
+      ]
+    }
+  ]
+}

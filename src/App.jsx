@@ -9,6 +9,8 @@ import ContactCta from './components/ContactCta'
 import Footer from './components/Footer'
 import WhatsAppModal from './components/WhatsAppModal'
 import BookingPage from './components/BookingPage'
+import JournalPage from './components/JournalPage'
+import PostDetailPage from './components/PostDetailPage'
 
 export default function App() {
   const normalizePath = (p) => (p || '/').replace(/\/$/, '') || '/'
@@ -71,6 +73,29 @@ export default function App() {
         key={selectedServiceCategory || 'default'}
         onBackToHome={() => navigate('/')}
         preselectedService={selectedServiceCategory}
+      />
+    )
+  }
+
+  // Dedicated /journal/:slug Single Post Detail Route
+  if (currentPath.startsWith('/journal/')) {
+    const postSlug = currentPath.replace(/^\/journal\//, '')
+    if (postSlug) {
+      return (
+        <PostDetailPage
+          key={postSlug}
+          slug={postSlug}
+          onNavigate={navigate}
+        />
+      )
+    }
+  }
+
+  // Dedicated /journal Listing Route
+  if (currentPath === '/journal') {
+    return (
+      <JournalPage
+        onNavigate={navigate}
       />
     )
   }

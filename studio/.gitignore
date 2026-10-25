@@ -1,0 +1,13 @@
+# Studio local dependencies and build artifacts
+node_modules/
+dist/
+.sanity/
+
+# Environment files containing local configurations
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
