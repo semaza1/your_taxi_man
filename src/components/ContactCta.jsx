@@ -105,7 +105,7 @@ export default function ContactCta({ onBookClick, onOpenWhatsAppModal }) {
                   onClick={onBookClick}
                   className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-bold text-sm text-stone-900 bg-taxi-yellow hover:bg-taxi-yellowHover transition-colors min-h-[46px]"
                 >
-                  <span>Go to Dedicated Booking Page (/book)</span>
+                  <span>Go to Dedicated Booking Page</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>

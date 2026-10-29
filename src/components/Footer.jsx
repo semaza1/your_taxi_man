@@ -76,10 +76,10 @@ export default function Footer({ onNavigate }) {
                 <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="hover:text-taxi-yellow transition-colors py-1 inline-block">Home</a>
               </li>
               <li>
-                <button type="button" onClick={() => onNavigate && onNavigate('/book')} className="hover:text-taxi-yellow transition-colors py-1 text-left font-semibold text-stone-200">Book a Ride (/book)</button>
+                <button type="button" onClick={() => onNavigate && onNavigate('/book')} className="hover:text-taxi-yellow transition-colors py-1 text-left font-semibold text-stone-200">Book a Ride</button>
               </li>
               <li>
-                <button type="button" onClick={() => onNavigate && onNavigate('/journal')} className="hover:text-taxi-yellow transition-colors py-1 text-left font-semibold text-stone-200">Stories from the Road (/journal)</button>
+                <button type="button" onClick={() => onNavigate && onNavigate('/journal')} className="hover:text-taxi-yellow transition-colors py-1 text-left font-semibold text-stone-200">Stories from the Road</button>
               </li>
               <li>
                 <a href="#services" onClick={(e) => handleNavClick(e, 'services')} className="hover:text-taxi-yellow transition-colors py-1 inline-block">Services</a>

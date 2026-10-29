@@ -13,7 +13,7 @@ export const BUSINESS_CONFIG = {
   whatsappNumber: "250788910995", 
   whatsappDisplay: "+250 788 910 995",
   phoneNumber: "+250 788 910 995",
-  email: "semazaemmanuel@gmail.com",
+  email: "yourtaximan4@gmail.com",
   
   // Confirmed Social Profiles
   instagramUrl: "https://www.instagram.com/your_taxi_man/",
